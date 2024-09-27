@@ -1,0 +1,12 @@
+[package]
+name = "plug0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["dylib"]
+# , "cdylib"
+
+
+# [build]
+# rustflags = ["-C", "prefer-dynamic", "-C", "rpath"]
