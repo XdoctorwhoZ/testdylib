@@ -16,9 +16,12 @@ fn main() {
         println!("get_number got {} == expect 5", func());
 
         let func2: libloading::Symbol<fn() -> *mut u32> = lib.get(b"get_number_pointer").unwrap();
-        println!("get_number got {} == expect 5", *func2());
+        println!("get_number_pointer got {} == expect 5", *func2());
 
         let func3: libloading::Symbol<fn() -> *mut simple_struct> = lib.get(b"get_simple_struct_ptr").unwrap();
-        println!("get_number got {} == expect 6", (*func3()).a);
+        println!("get_simple_struct_ptr got {} == expect 6", (*func3()).a);
+
+
+        
     }
 }
